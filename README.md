@@ -96,7 +96,7 @@ CityVerse takes a different approach.
 
 The goal is to create a **3D digital twin of a city** where users can visually understand what is happening and experiment with different scenarios.
 
-### Vision
+Vision
 
 ```text
 Real / Simulated City Data
