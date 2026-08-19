@@ -1,63 +1,584 @@
-# CityVerse — AI-Powered 3D Digital Twin & Smart City Platform
+# 🌆 CityVerse — AI-Powered 3D Digital Twin & Smart City Platform
 
-An interactive 3D digital twin of a smart city: explore 8 procedurally
-generated districts, inspect buildings, watch animated traffic, change the
-time of day and weather, toggle city layers, and run "what-if" simulations
-(traffic surges, road closures, construction, emergencies) with before/after
-comparisons — all backed by a live AI assistant grounded in the actual
-simulated city data.
+<p align="center">
+  <strong>Explore. Simulate. Analyze. Predict.</strong>
+</p>
 
-This repo is a **runnable prototype**: a single-page Vite + React +
-TypeScript + Three.js app, plus one serverless function that proxies AI
-requests to the Anthropic API. There is no database yet — city data is
-generated client-side from a seeded random function, so it's identical on
-every load but requires no backend to run. `docs/` describes exactly how
-this becomes a real multi-user, sensor-connected platform.
+<p align="center">
+  An interactive 3D Smart City Digital Twin powered by Three.js, React, TypeScript, simulation intelligence, and AI.
+</p>
 
-## What's included
+<p align="center">
 
-- **3D city** — procedural buildings/roads/parks across 8 districts
-  (Downtown, Residential, Commercial, Industrial, University, Airport,
-  Hospital District, Shopping District), rendered with instanced Three.js
-  meshes; drag to orbit, scroll/pinch to zoom, tap a building to inspect it.
-- **Traffic system** — color-coded roads (green/yellow/orange/red), animated
-  cars, speed reacts to congestion level.
-- **Time-of-day system** — 7 presets (06:00 → 00:00) that relight the scene
-  and switch on building/street lighting at night.
-- **Weather system** — Clear / Cloudy / Rain / Storm / Fog, with real particle
-  rain and dynamic fog density.
-- **City layers** — toggle buildings, roads, traffic, parks, water network,
-  energy-flow overlay independently.
-- **Energy & water overlays**, building **Energy Mode**, City Intelligence
-  Score, exportable **.txt report**.
-- **Simulation Mode** — sliders for traffic/population/energy/water/transport/
-  construction/weather severity, all live-affecting the 3D scene and charts.
-- **Drag-to-simulate** — drag an impact chip onto a district for a scoped
-  before/after.
-- **Construction tool** — tap the city to place a construction zone with a
-  generated timeline and impact.
-- **Road closure tool** — tap a road for a before/after confirmation, with
-  automatic traffic rerouting onto parallel roads.
-- **Emergency simulation** — Fire / Flood / Traffic accident / Power outage /
-  Water leak, placed randomly or by tapping the map, with severity,
-  population affected, infrastructure impact, and recommended response.
-- **AI City Assistant** — calls Claude with the current city + simulation
-  state as grounding context, so answers cite real numbers instead of
-  inventing them.
-- **Analytics panel** — energy-by-district and traffic-by-hour charts
-  (Recharts), air quality by district, report export.
+[🌐 Live Demo](https://cityverse-3d-smart-city.vercel.app/) ·
+[💻 GitHub](https://github.com/alirashidcs-hub) ·
+[📚 Documentation](./docs)
 
-No external image/model/texture assets are used — the entire city is
-procedurally generated geometry, so there's nothing under `public/` beyond a
-favicon.
+</p>
 
-## Project structure
+---
 
-```
-.
+## 🚀 Live Demo
+
+### 🌐 CityVerse 3D Smart City
+
+**Experience the live application:**
+
+👉 https://cityverse-3d-smart-city.vercel.app/
+
+The live application provides an interactive 3D smart-city environment where users can explore districts, inspect buildings, monitor simulated infrastructure, and run real-time "what-if" scenarios.
+
+### ✨ Live Features
+
+- 🌆 Interactive 3D city
+- 🏙️ 8 smart-city districts
+- 🏢 Interactive buildings
+- 🚗 Animated traffic
+- 🚦 Traffic-light simulation
+- 🌦️ Dynamic weather
+- 🌅 Time-of-day simulation
+- 🌙 Dynamic night lighting
+- ⚡ Energy monitoring
+- 💧 Water monitoring
+- 🌫️ Air-quality simulation
+- 🎮 Simulation Mode
+- 🚧 Construction simulation
+- 🚫 Road closure simulation
+- 🚨 Emergency simulation
+- 📊 City analytics
+- 🤖 AI City Assistant
+- 🏠 Walkable villa interior
+- 🌳 Parks and landscaping
+- 🚑 Emergency vehicles
+- 🔄 Before/After scenario comparison
+
+---
+
+# 📌 Overview
+
+**CityVerse** is an interactive 3D Smart City Digital Twin and simulation platform.
+
+Instead of displaying smart-city information through a traditional dashboard, CityVerse places the user directly inside a dynamic 3D city.
+
+Users can:
+
+- Explore an interactive city
+- Inspect buildings
+- Monitor traffic
+- Analyze energy usage
+- Monitor water systems
+- Change weather conditions
+- Change time of day
+- Simulate emergencies
+- Close roads
+- Add construction zones
+- Increase traffic
+- Modify population
+- Analyze infrastructure changes
+- Ask an AI assistant about the simulated city
+
+The project demonstrates how **3D visualization, simulation systems, AI, and smart-city concepts** can be combined into one interactive platform.
+
+> **Current Status:** CityVerse is a functional prototype using simulated city data. The project includes a documented architecture for future PostgreSQL/Supabase databases, IoT sensors, authentication, persistent simulations, and multi-user functionality.
+
+---
+
+# 🎯 Project Vision
+
+Traditional smart-city platforms often rely heavily on:
+
+- Tables
+- Charts
+- Maps
+- Static dashboards
+
+CityVerse takes a different approach.
+
+The goal is to create a **3D digital twin of a city** where users can visually understand what is happening and experiment with different scenarios.
+
+### Vision
+
+```text
+Real / Simulated City Data
+          ↓
+     Smart City Engine
+          ↓
+   3D Digital Twin
+          ↓
+ Simulation Engine
+          ↓
+ AI Analysis
+          ↓
+ Decisions & Insights
+🏙️ City Districts
+CityVerse contains eight procedurally generated districts.
+District
+Purpose
+🏙️ Downtown
+Skyscrapers, offices and city landmark
+🏡 Residential
+Houses, apartments and parks
+🛍️ Commercial
+Shops, restaurants and businesses
+🏭 Industrial
+Factories, warehouses and logistics
+🎓 University
+Campus buildings and student areas
+✈️ Airport
+Airport terminal and transportation
+🏥 Hospital
+Healthcare infrastructure and emergency services
+🛒 Shopping
+Shopping centers, retail and pedestrian areas
+Each district has different building types, roads, traffic characteristics and infrastructure behavior.
+🌆 3D City Experience
+The city is generated using Three.js.
+The environment includes:
+Buildings
+Roads
+Sidewalks
+Curbs
+Street lights
+Traffic lights
+Vehicles
+Trees
+Parks
+Parking areas
+Water
+Fountains
+Landmark tower
+Pedestrians
+Emergency vehicles
+The city is designed to provide an architectural visualization experience rather than a traditional 2D dashboard.
+🏢 Building System
+CityVerse uses procedural architectural building archetypes.
+Current building types include:
+Tower
+Office
+House
+Apartment
+Mall
+Warehouse
+University/Campus
+Airport Terminal
+Hospital
+Buildings contain multiple architectural components such as:
+Podiums
+Bodies
+Crowns
+Roofs
+Balconies
+Signs
+Windows
+Glass sections
+Buildings are varied using seeded generation so the city does not contain identical structures everywhere.
+🪟 Dynamic Windows
+Buildings contain large numbers of instanced window elements.
+During the day:
+Windows appear as reflective glass.
+During the night:
+Selected windows illuminate.
+Warm and cool lighting variations appear.
+Building lighting changes automatically with the time-of-day system.
+🛣️ Smart Road Network
+CityVerse includes a multi-level road system.
+Road types include:
+Main roads
+Secondary roads
+Residential roads
+Service roads
+Road environments include:
+Asphalt
+Lane markings
+Sidewalks
+Curbs
+Street lights
+Traffic lights
+Traffic simulation
+🚗 Traffic Simulation
+Traffic changes dynamically based on city conditions.
+Traffic levels:
+🟢 Low
+🟡 Moderate
+🟠 Heavy
+🔴 Severe
+Vehicles respond to simulated congestion.
+Vehicle types include:
+Cars
+Buses
+Trucks
+Emergency vehicles
+Road closure simulations can reroute traffic onto alternative roads.
+🚦 Traffic Lights
+Traffic lights are connected to simulated traffic conditions.
+The system can visually reflect changes in:
+Traffic volume
+Congestion
+Road conditions
+Simulation scenarios
+🌦️ Dynamic Weather
+CityVerse supports multiple weather modes.
+☀️ Clear
+Normal visibility and lighting.
+☁️ Cloudy
+Reduced environmental brightness.
+🌧️ Rain
+Includes:
+Particle rain
+Wet-road appearance
+Puddle effects
+⛈️ Storm
+Includes:
+Heavy rain
+Fog
+Lightning effects
+Darker lighting
+🌫️ Fog
+Dynamic atmospheric fog reduces visibility.
+🌅 Time-of-Day Simulation
+Users can change the city time.
+Supported periods range from:
+06:00
+08:00
+10:00
+12:00
+16:00
+20:00
+00:00
+Changing the time affects:
+Sunlight
+Ambient lighting
+Building windows
+Street lights
+Traffic lights
+Landmark illumination
+🎮 Simulation Mode
+Simulation Mode is one of the core CityVerse features.
+Users can change:
+Traffic
+Population
+Energy demand
+Water demand
+Public transport
+Construction activity
+Weather severity
+Example:
+Traffic
+0% ━━━━━━━━━●━━ 100%
+
+Population
+0% ━━━━━━━●━━━━ 100%
+
+Energy
+0% ━━━━━━━━━●━━ 100%
+Changes immediately affect the simulated city.
+🧪 What-If Simulation
+CityVerse allows users to experiment with hypothetical situations.
+Examples:
+What happens if traffic increases by 40%?
+What happens if a major road is closed?
+What happens if construction starts downtown?
+What happens during a power outage?
+Which district is affected the most?
+🖱️ Drag-to-Simulate
+Users can drag simulation effects onto districts.
+Example:
+Traffic +30%
+       ↓
+    Downtown
+The system calculates a simulated impact.
+Results can include:
+Traffic change
+Affected roads
+Estimated delay
+Population impact
+City score change
+🚧 Construction Simulation
+Users can place construction zones directly inside the 3D city.
+Construction simulations can affect:
+Traffic
+Population
+Roads
+Infrastructure
+District performance
+The application displays a simulated construction timeline.
+🚫 Road Closure Simulation
+Users can select a road and close it.
+CityVerse calculates:
+Traffic before closure
+Traffic after closure
+Estimated delay
+Affected districts
+Alternative routes
+Vehicles visually reroute through alternative roads.
+🚨 Emergency Simulation
+CityVerse supports multiple emergency scenarios.
+Supported Events
+🔥 Fire
+🌊 Flood
+🚗 Traffic accident
+⚡ Power outage
+💧 Water leak
+Emergency simulations display:
+Severity
+Population affected
+Infrastructure affected
+Emergency response recommendations
+Emergency markers appear directly in the 3D city.
+🚑 Emergency Vehicles
+Emergency simulations can activate emergency vehicles.
+Supported vehicle types include:
+Ambulance
+Fire truck
+Police vehicle
+Emergency vehicles can move toward the simulated emergency location.
+⚡ Energy System
+CityVerse includes an energy visualization system.
+Users can inspect:
+Building energy usage
+District energy consumption
+Energy efficiency
+Energy flow
+Buildings can display energy-related visual indicators.
+💧 Water System
+The city includes simulated water infrastructure.
+Water data can be visualized by district and incorporated into simulations.
+Future versions can connect this system to real water sensors.
+🌫️ Air Quality
+Air quality can vary between districts.
+The analytics system provides district-level visualization.
+Future versions can connect the system to real:
+Air-quality sensors
+Weather stations
+Environmental monitoring devices
+🤖 AI City Assistant
+CityVerse includes an AI assistant powered by the Anthropic API.
+The assistant receives the current simulated city state as context.
+This allows users to ask questions such as:
+What is happening in Downtown?
+
+Which district has the highest energy consumption?
+
+What happens if traffic increases by 30%?
+
+Which roads are currently affected?
+
+What happens if this road is closed?
+
+Which district needs infrastructure improvements?
+The AI is designed to answer using the actual simulated values instead of relying purely on generic responses.
+🧠 AI Grounding Architecture
+The AI request flow is:
+User
+ ↓
+CityVerse UI
+ ↓
+Simulation State
+ ↓
+/api/assistant
+ ↓
+Anthropic API
+ ↓
+AI Response
+ ↓
+CityVerse UI
+The API key is kept server-side.
+It is never intended to be exposed to the browser.
+📊 Analytics
+CityVerse includes analytics for:
+Energy consumption
+Traffic
+Air quality
+District performance
+City Intelligence Score
+Simulation results
+Charts help users understand how changes affect the city.
+🏆 City Intelligence Score
+CityVerse calculates a simulated City Intelligence Score.
+The score changes based on simulated conditions such as:
+Traffic
+Energy
+Population
+Water
+Transport
+Weather
+Infrastructure
+The score provides a simple high-level view of city performance.
+🔄 Before / After Comparison
+Simulation events can be compared against the baseline.
+Example:
+CITY SCORE
+
+Before: 87
+After: 72
+
+TRAFFIC
+
+Before: 45%
+After: 81%
+
+ENERGY
+
+Before: 62%
+After: 89%
+This allows users to understand the impact of hypothetical decisions.
+🏠 Walkable 3D Interior
+CityVerse includes a procedural walkable Modern Villa interior.
+The interior includes:
+Living room
+Kitchen
+Dining area
+Bedroom
+Bathroom
+Furniture
+Doors
+Interior lighting
+Users can enter the building and explore the interior.
+Controls
+Desktop:
+W / A / S / D
+Mouse
+Mobile:
+Touch controls
+Virtual joystick
+The interior is loaded only when needed to reduce performance impact.
+🌳 Environment
+The city environment contains:
+Trees
+Bushes
+Parks
+Fountains
+Grass areas
+Parking areas
+Water features
+Street furniture
+Vegetation is generated using optimized geometry and instancing.
+🗼 Downtown Landmark
+Downtown includes a custom futuristic landmark tower.
+The landmark contains:
+Glass facade
+Illuminated sections
+Tapered structure
+Plaza
+Fountain
+Surrounding landscaping
+It acts as the visual centerpiece of the city.
+🎥 Camera & Exploration
+Users can:
+Orbit around the city
+Zoom
+Rotate
+Inspect buildings
+Fly toward selected buildings
+Explore at street level
+Enter selected buildings
+The goal is to make the city feel like an explorable digital environment rather than a static visualization.
+🗺️ City Layers
+Users can independently toggle:
+Buildings
+Roads
+Traffic
+Parks
+Water
+Energy flow
+Other visualization layers
+This allows users to focus on specific infrastructure systems.
+⚡ Performance
+Performance is a major consideration.
+CityVerse uses:
+THREE.InstancedMesh
+Shared materials
+Procedural geometry
+Frustum-friendly scene organization
+Lazy interior loading
+Efficient lighting
+Reusable geometry
+Optimized vehicle rendering
+The exterior city uses approximately:
+~300 draw calls
+depending on runtime state.
+Large groups such as:
+Buildings
+Windows
+Trees
+Vehicles
+Lamps
+Pedestrians
+use instancing where appropriate.
+📦 3D Asset Architecture
+CityVerse includes a GLB/GLTF asset pipeline.
+Current asset registry categories include:
+Buildings
+Vehicles
+Landmarks
+Interiors
+Environment
+External binary assets are not bundled by default.
+This avoids accidentally distributing third-party models without verifying their licenses.
+🧩 Adding Your Own 3D Models
+Place models inside:
+public/models/
+For example:
+public/models/
+├── buildings/
+│   ├── villa.glb
+│   ├── hospital.glb
+│   └── office.glb
+├── vehicles/
+│   ├── car.glb
+│   └── ambulance.glb
+├── landmarks/
+└── interiors/
+Then register the model inside:
+src/data/modelRegistry.ts
+Set:
+available: true
+and provide:
+Model path
+License
+Source
+Scale
+LOD information
+The application retains procedural fallbacks if a model is unavailable.
+🧱 Technology Stack
+Frontend
+React
+TypeScript
+Vite
+Three.js
+Tailwind CSS
+Lucide React
+Recharts
+3D Engine
+Three.js
+WebGL
+InstancedMesh
+ShaderMaterial
+GLTFLoader
+Procedural geometry
+AI
+Anthropic API
+AI City Assistant
+Simulation-aware context grounding
+Backend
+Current:
+Vercel Serverless Functions
+Planned:
+Supabase
+PostgreSQL
+Realtime
+Authentication
+Persistent simulation storage
+Deployment
+Vercel
+GitHub
+📁 Project Structure
+CityVerse/
+│
 ├── api/
-│   └── assistant.ts        # Vercel serverless function — proxies AI calls
-├── docs/                   # Architecture docs for the production version
+│   └── assistant.ts
+│
+├── docs/
 │   ├── architecture.md
 │   ├── database-schema.md
 │   ├── api-design.md
@@ -65,12 +586,28 @@ favicon.
 │   ├── iot-integration.md
 │   ├── deployment.md
 │   └── security.md
+│
 ├── public/
-│   └── favicon.svg
+│   ├── favicon.svg
+│   └── models/
+│
 ├── src/
-│   ├── CityVerse.tsx        # The entire app: landing page + 3D city + UI
-│   ├── main.tsx              # React entry point
-│   └── index.css             # Tailwind directives + minor globals
+│   ├── 3d/
+│   │   ├── assets/
+│   │   │   └── assetLoader.ts
+│   │   ├── controls/
+│   │   │   ├── useKeyboardControls.ts
+│   │   │   └── TouchJoystick.tsx
+│   │   └── interiors/
+│   │       └── VillaInterior.tsx
+│   │
+│   ├── data/
+│   │   └── modelRegistry.ts
+│   │
+│   ├── CityVerse.tsx
+│   ├── main.tsx
+│   └── index.css
+│
 ├── index.html
 ├── package.json
 ├── package-lock.json
@@ -80,362 +617,395 @@ favicon.
 ├── tailwind.config.js
 ├── postcss.config.js
 ├── .env.example
-└── .gitignore
-```
-
-`CityVerse.tsx` is intentionally one file, mirroring how it was originally
-built as a single self-contained artifact. It's larger than a typical
-component but is organized into clear sections (constants → city generator →
-Landing → CityApp: three.js setup effect → reactive effects → simulation
-logic → render). Splitting it into `src/components/*` is a reasonable next
-step once the app grows a backend — not required to run it today.
-
-## 1. Install dependencies
-
-Requires Node.js 18+ and npm 9+.
-
-```bash
+├── .gitignore
+└── README.md
+⚙️ Installation
+Requirements
+Install:
+Node.js 18+
+npm 9+
+Git
+Check:
+node -v
+npm -v
+git --version
+📥 Install Dependencies
+Clone the repository:
+git clone https://github.com/alirashidcs-hub/cityverse-3d-smart-city.git
+Enter the project:
+cd cityverse-3d-smart-city
+Install dependencies:
 npm install
-```
-
-This installs React, Three.js, Recharts, lucide-react, Tailwind, TypeScript,
-and Vite, and writes/updates `package-lock.json`.
-
-## 2. Environment variables
-
-```bash
-cp .env.example .env
-```
-
-Then edit `.env` and set:
-
-```
-ANTHROPIC_API_KEY=sk-ant-api03-...   # from https://console.anthropic.com/
-```
-
-This is the only variable required to run the app today. The Supabase /
-Upstash / MQTT variables in `.env.example` are placeholders for the
-production architecture described in `docs/` — leave them blank for now.
-
-**Never commit `.env`** — it's already in `.gitignore`.
-
-## 3. Run locally
-
-The AI assistant is served by a Vercel serverless function
-(`api/assistant.ts`), so the recommended way to run everything together is
-the Vercel CLI:
-
-```bash
-npm install -g vercel      # one-time
-vercel dev
-```
-
-This serves the Vite frontend **and** `/api/assistant` on the same local
-port, reading `ANTHROPIC_API_KEY` from your `.env`.
-
-Alternatively, for frontend-only work where you don't need the AI assistant:
-
-```bash
+🔐 Environment Variables
+Create:
+.env
+from:
+.env.example
+Add:
+ANTHROPIC_API_KEY=your_anthropic_api_key
+The API key must remain private.
+Never commit:
+.env
+The repository's .gitignore already excludes environment secrets.
+💻 Run Locally
+For frontend-only development:
 npm run dev
-```
-
-This runs the Vite dev server only (`http://localhost:5173`). Every other
-feature — the 3D city, simulation, traffic, weather, analytics — works fine;
-the AI panel will show a connection error until it's served through
-`vercel dev` or a deployment.
-
-## 4. Type-check & build for production
-
-```bash
+Then open:
+http://localhost:5173
+The 3D city and simulation systems will work normally.
+The AI assistant requires the serverless API function.
+🔌 Run Frontend + API Locally
+Install Vercel CLI:
+npm install -g vercel
+Then:
+vercel dev
+This allows the Vercel serverless function to run locally together with the frontend.
+🧪 Type Check
+Run:
+npm run typecheck
+🏗️ Production Build
+Run:
 npm run build
-```
-
-This runs `tsc --noEmit` (type-check) followed by `vite build`, and outputs
-static assets to `dist/`. `npm run typecheck` runs just the type-check.
-Preview the production build locally with:
-
-```bash
+This performs:
+TypeScript check
+       ↓
+Vite production build
+       ↓
+dist/
+👀 Preview Production Build
 npm run preview
+☁️ Deploy to Vercel
+The project is designed for Vercel deployment.
+Install the Vercel CLI if needed:
+npm install -g vercel
+First deployment:
+vercel
+Production deployment:
+vercel --prod
+Alternatively, import the GitHub repository directly into Vercel.
+🔑 Vercel Environment Variables
+Inside:
+Vercel
+→ Project
+→ Settings
+→ Environment Variables
+Add:
+ANTHROPIC_API_KEY
+with your actual API key.
+Do not add the actual key to GitHub.
+🔄 GitHub Workflow
+After making changes:
+git add .
+Commit:
+git commit -m "feat: improve CityVerse 3D experience"
+Push:
+git push
+If Vercel is connected to the GitHub repository, the new version will automatically deploy.
+🗄️ Future Supabase Architecture
+The current version does not require a database.
+City data is generated client-side using seeded procedural generation.
+The planned production architecture is:
+User
+ ↓
+Next.js / React
+ ↓
+API Layer
+ ↓
+Supabase
+ ↓
+PostgreSQL
+ ↓
+Realtime / IoT
+ ↓
+City Digital Twin
+The future system can support:
+User accounts
+Saved cities
+Persistent simulations
+Scenario sharing
+Historical data
+IoT sensors
+Real-time monitoring
+Alerts
+Reports
+Multi-user collaboration
+See:
+docs/database-schema.md
+docs/architecture.md
+docs/deployment.md
+📡 Future IoT Integration
+The architecture is designed to eventually support real smart-city sensors.
+Potential sensors:
+Traffic sensors
+Energy meters
+Water meters
+Air-quality sensors
+Weather stations
+Emergency sensors
+Future data flow:
+IoT Sensors
+     ↓
+IoT Gateway
+     ↓
+Backend
+     ↓
+PostgreSQL / Supabase
+     ↓
+Realtime Events
+     ↓
+CityVerse
+     ↓
+3D Visualization
+🔮 Roadmap
+Phase 1 — Core 3D City
+[x] Procedural city
+[x] 8 districts
+[x] Buildings
+[x] Roads
+[x] Traffic
+[x] Weather
+[x] Time-of-day
+[x] City layers
+Phase 2 — Smart City Simulation
+[x] Simulation Mode
+[x] Traffic simulation
+[x] Population simulation
+[x] Energy simulation
+[x] Water simulation
+[x] Construction simulation
+[x] Road closure
+[x] Emergency simulation
+[x] Before/After comparison
+[x] AI simulation analysis
+Phase 3 — Visual Upgrade
+[x] Architectural building archetypes
+[x] Dynamic windows
+[x] Improved roads
+[x] Street lighting
+[x] Landscaping
+[x] Downtown landmark
+[x] Vehicles
+[x] Emergency vehicles
+[x] Weather visual effects
+[x] Street-level camera
+Phase 4 — Interactive Buildings
+[x] GLB/GLTF asset architecture
+[x] Model registry
+[x] Asset loader
+[x] Walkable villa interior
+[x] Keyboard controls
+[x] Touch controls
+[x] Interior lighting
+[x] Interior collision
+Phase 5 — Production Platform
+[ ] Supabase authentication
+[ ] PostgreSQL database
+[ ] Persistent city data
+[ ] Saved simulations
+[ ] User accounts
+[ ] Real-time data
+[ ] IoT integration
+[ ] Advanced AI tool calling
+[ ] Multi-user collaboration
+[ ] Advanced scenario management
+Phase 6 — Advanced Digital Twin
+[ ] Real geographic data
+[ ] GeoJSON integration
+[ ] Real GIS layers
+[ ] Live traffic data
+[ ] Live weather data
+[ ] Real sensor feeds
+[ ] Predictive analytics
+[ ] Machine-learning forecasting
+[ ] Digital twin synchronization
+🧠 Future AI Capabilities
+Future versions can expand the AI assistant into a complete city intelligence engine.
+Potential capabilities:
+Predictive Traffic
+Predict congestion before it happens.
+Energy Forecasting
+Predict district energy demand.
+Emergency Planning
+Recommend optimal emergency response locations.
+Infrastructure Planning
+Recommend:
+Hospitals
+Schools
+Roads
+Parks
+Charging stations
+Public transport
+Urban Planning
+Ask:
+Where should we build a new hospital?
+
+Which district needs another road?
+
+Where should a new school be located?
+
+How can we reduce Downtown congestion?
+
+Which district has the highest energy risk?
+🔒 Security
+The current prototype keeps the Anthropic API key server-side.
+Production architecture will additionally implement:
+Authentication
+Authorization
+Row Level Security
+API rate limiting
+Input validation
+Secure environment variables
+Audit logs
+Role-based access control
+Server-side AI requests
+Security documentation:
+docs/security.md
+📈 Performance Considerations
+CityVerse uses several optimization techniques.
+Instancing
+Large groups of objects share GPU draw calls.
+Procedural Generation
+No large collection of static model files is required for the base city.
+Lazy Loading
+Interior scenes are loaded only when required.
+Reusable Materials
+Materials are shared whenever possible.
+Scene Isolation
+The main city renderer pauses while the villa interior is active.
+LOD Strategy
+Future GLB assets can use:
+High Detail
+    ↓
+Medium Detail
+    ↓
+Low Detail
+    ↓
+Procedural Fallback
+⚠️ Current Prototype Limitations
+CityVerse is currently a prototype.
+The following are simulated rather than connected to real-world infrastructure:
+Traffic data
+Energy data
+Water data
+Air quality
+Population
+Weather impact
+Emergency data
+There is currently:
+No production database
+No user authentication
+No real IoT sensor integration
+No persistent city state
+No multi-user collaboration
+The architecture for these capabilities is documented in docs/.
+📚 Documentation
+Detailed architecture documentation is available in:
+docs/
+├── architecture.md
+├── database-schema.md
+├── api-design.md
+├── ai-architecture.md
+├── iot-integration.md
+├── deployment.md
+└── security.md
+🧪 Build Verification
+The project has been verified using:
+npm install
+npm run typecheck
+npm run build
+Expected production output:
+✓ TypeScript check
+✓ Vite build
+✓ Production bundle generated
+📊 Current Technical Snapshot
+Category
+Technology
+Frontend
+React
+Language
+TypeScript
+Build Tool
+Vite
+3D Engine
+Three.js
+Charts
+Recharts
+Styling
+Tailwind CSS
+Icons
+Lucide React
+AI
+Anthropic API
+API
+Vercel Serverless
+Deployment
+Vercel
+Source Control
+GitHub
+Future Database
+PostgreSQL / Supabase
+Future Realtime
+Supabase Realtime
+Future IoT
+MQTT / IoT Gateway
+🌐 Live Application
+CityVerse 3D Smart City
+🚀 Open the application:
+https://cityverse-3d-smart-city.vercel.app/⁠�
+👨‍💻 Developer
+Ali Rashid
+Computer Science Student
+University of Engineering and Technology (UET) Taxila
+📧 Email:
+ar2701699@gmail.com
+💼 LinkedIn:
+https://www.linkedin.com/in/ali-rashid-cs/⁠�
+⭐ Support the Project
+If you find CityVerse interesting:
+⭐ Star the repository
+🍴 Fork the project
+🐛 Report issues
+💡 Suggest improvements
+🔧 Contribute new features
+📜 License
+This project is currently a prototype/demo project.
+Before distributing or commercializing the project, add an appropriate open-source or proprietary license.
+🚀 Final Vision
+CityVerse is designed to evolve from a procedural 3D prototype into a complete AI-powered Smart City Digital Twin platform.
+The long-term goal is:
+                 ┌─────────────────────┐
+                 │     REAL CITY       │
+                 └──────────┬──────────┘
+                            │
+                     IoT / GIS / APIs
+                            │
+                            ▼
+                 ┌─────────────────────┐
+                 │   CITY DATA LAYER   │
+                 │ PostgreSQL/Supabase │
+                 └──────────┬──────────┘
+                            │
+                            ▼
+                 ┌─────────────────────┐
+                 │ SIMULATION ENGINE   │
+                 └──────────┬──────────┘
+                            │
+                ┌───────────┴───────────┐
+                ▼                       ▼
+       ┌────────────────┐     ┌────────────────┐
+       │ 3D DIGITAL TWIN│     │ AI INTELLIGENCE│
+       └────────────────┘     └────────────────┘
+                │                       │
+                └───────────┬───────────┘
+                            ▼
+                 ┌─────────────────────┐
+                 │ SMART CITY DECISION │
+                 │     PLATFORM        │
+                 └─────────────────────┘
+CityVerse aims to make complex urban systems understandable, interactive, and intelligent through 3D visualization, simulation, and AI.
+�
+Built with ❤️ using React, TypeScript, Three.js, and AI. 
+
+�
+CityVerse — Explore the Future of Smart Cities. 
 ```
-
-## 5. Deploying to Vercel
-
-```bash
-vercel            # first deploy — follow the prompts to link/create a project
-vercel --prod     # subsequent production deploys
-```
-
-Or connect the repo in the Vercel dashboard for automatic deploys on push.
-Either way, set `ANTHROPIC_API_KEY` in **Project → Settings → Environment
-Variables** on Vercel (it won't read your local `.env`). Vercel auto-detects
-the Vite frontend and the `api/assistant.ts` serverless function — no extra
-configuration needed.
-
-## 6. Connecting Supabase later
-
-This prototype has no database — city data is generated in the browser.
-`docs/database-schema.md` has the full target schema and
-`docs/architecture.md` / `docs/deployment.md` describe the migration path.
-At a high level, when you're ready:
-
-1. Create a Supabase project, run the SQL in `docs/database-schema.md`
-   (as versioned migrations, e.g. via `supabase db push`).
-2. Set `VITE_SUPABASE_URL` / `VITE_SUPABASE_ANON_KEY` (client-safe, RLS-
-   protected) and `SUPABASE_SERVICE_ROLE_KEY` (server-only) in your
-   environment.
-3. Replace the client-side `generateCity()` call in `CityVerse.tsx` with a
-   fetch to `/api/city/graph` (see `docs/api-design.md`), backed by a new
-   serverless function that reads from Supabase instead of generating data
-   in-browser.
-4. Do the same for simulation state (`/api/simulations/*`) so simulations
-   persist and can be shared, per `docs/database-schema.md`'s `simulations`
-   / `simulation_events` tables.
-
-## 7. Connecting the AI API (already wired, for reference)
-
-The AI Assistant panel already calls `/api/assistant`, which forwards to
-Anthropic's `/v1/messages` endpoint using `ANTHROPIC_API_KEY` from the
-server environment — the key is never sent to the browser. To swap models
-or add tool-use (per `docs/ai-architecture.md`'s `get_district_metrics` /
-`run_simulation_preview` tool pattern), edit `api/assistant.ts`.
-
-## Phase 3 — 3D asset & performance notes
-
-The city upgraded in Phase 3 from flat colored boxes to a layered procedural
-architectural look. Everything below is generated at runtime — **no binary
-asset files ship with this repo** (no `.glb`, `.png`, `.jpg` textures).
-
-**Procedural (100% of what you see today):**
-- **Buildings** — 8 archetypes (tower, office, house, apartment, mall,
-  warehouse, campus, terminal, hospital), each a small set of "parts"
-  (podium/body/crown/roof/sign/etc.) defined as fractional offsets of a
-  building's own width/height/depth in `ARCHETYPES` (top of `CityVerse.tsx`).
-  Every part of every archetype is ONE `THREE.InstancedMesh` shared across
-  every matching building — e.g. all ~120 tower "bodies" in Downtown are one
-  draw call, not 120.
-- **Windows** — one `InstancedMesh` of thousands of thin boxes positioned
-  around each building's footprint, with a per-window random lit/unlit flag
-  set once at generation and recolored (day glass-blue → night warm/cool
-  emissive) only when the time-of-day changes, not per frame.
-- **Roads, lane markings, terrain** — small canvas-drawn textures
-  (`makeAsphaltTexture`, `makeLaneTexture`, `makeTerrainTexture`) generated
-  once at load, tiled via `THREE.RepeatWrapping`. No image files.
-- **Water (river + park fountains)** — a custom `THREE.ShaderMaterial` with
-  a time uniform for a cheap animated shimmer, no texture needed.
-- **Vehicles, trees, street lamps, traffic lights, parking lots, the
-  landmark tower** — all primitive-composed (box/cylinder/cone/sphere),
-  instanced where the count is large (windows, buildings, trees, lamps,
-  vehicles), individual meshes only for the handful of one-off objects
-  (the landmark, park fountains, parking lots).
-
-**GLTF/GLB — wired up, not populated.** `src/CityVerse.tsx` imports
-`GLTFLoader` from `three/examples/jsm/loaders/GLTFLoader.js` and exposes:
-
-```ts
-const MODEL_OVERRIDES = {}; // e.g. { tower: "/models/my-tower.glb" }
-function loadModel(url) { /* returns a Promise<THREE.Group> */ }
-```
-
-No `.glb` ships with this repo — bundling one would mean taking on a
-specific model's license without your sign-off. **To add your own model:**
-
-1. Drop an optimized `.glb`/`.gltf` into `public/models/`.
-2. Add an entry to `MODEL_OVERRIDES`, e.g. `{ landmark: "/models/tower.glb" }`.
-3. In the landmark (or an archetype's) construction code, call
-   `loadModel(MODEL_OVERRIDES.landmark)` and, once resolved, add the loaded
-   `THREE.Group` to the scene in place of (or alongside, via `THREE.LOD`,
-   swapping in the GLTF only within some distance of the camera) the
-   procedural version. The procedural version is a reasonable low-detail
-   fallback/LOD tier for distant buildings either way.
-4. Keep polycount modest for anything instanced at city scale — a few
-   hundred to low thousands of triangles per unique model is a reasonable
-   target so an `InstancedMesh` of it stays cheap.
-
-**Performance, with real numbers from this build:** the whole city renders
-in roughly **300 draw calls** — the archetype+window+tree+vehicle+lamp
-systems are ~35 draw calls total *regardless of building/window/car count*
-because they're instanced; the road/sidewalk/curb network (not instanced,
-since each of the 26 road lines has a unique texture repeat) accounts for
-most of the rest (~160). That's comfortably within a smooth 60fps desktop
-budget. If you push the city much larger, the road network is the first
-place to optimize — merging each axis's sidewalks/curbs into one
-`BufferGeometry` via `BufferGeometryUtils.mergeGeometries` would collapse
-that ~160 down to a handful.
-
-**Not implemented this pass** (honest scope — see `docs/architecture.md`
-for how these'd slot in): normal/AO maps, a stadium/convention-center
-archetype, crosswalk geometry and turning-lane arrows, and full walkable 3D
-building interiors (the "Enter Building" flow currently opens a stylized
-2D floor-plan preview, not a 3D room).
-
-## Phase 4 — real asset system + walkable villa interior
-
-### Updated project structure
-
-```
-src/
-├── CityVerse.tsx          # main city scene + all UI (unchanged in structure)
-├── data/
-│   └── modelRegistry.ts   # NEW — typed registry of every known 3D asset slot
-└── 3d/                    # NEW — Phase 4 systems, kept isolated from CityVerse.tsx
-    ├── assets/
-    │   └── assetLoader.ts       # loadRegisteredModel(id) — registry-gated GLTF loading
-    ├── controls/
-    │   ├── useKeyboardControls.ts  # WASD/arrow-key ref hook
-    │   └── TouchJoystick.tsx       # on-screen virtual joystick
-    └── interiors/
-        └── VillaInterior.tsx      # the walkable Modern Villa interior
-public/
-└── models/                # NEW — empty, asset drop-in tree (see its own README)
-    ├── buildings/ vehicles/ landmarks/ interiors/ environment/
-```
-
-`CityVerse.tsx` itself was **not** restructured into the full
-`src/3d/{city,buildings,vehicles,environment,lighting,camera}/` tree the
-brief sketched — deliberately. It's ~2,300 lines of interconnected,
-already-working state (simulation engine, AI grounding, 8+ reactive
-`useEffect`s tied to a single Three.js scene) with no way for me to
-smoke-test a large mechanical refactor in a real browser before handing it
-to you. Moving it wholesale risked exactly the kind of regression the brief
-said not to introduce. Every genuinely **new** Phase 4 system *is* modular,
-for the same reason in reverse: new code has no working behavior to
-regress, so it went straight into `src/3d/` and `src/data/` as intended.
-Migrating the existing city code into that structure is a reasonable
-next PR, done with the app running in front of you.
-
-### New assets — what's procedural vs. real
-
-**Nothing new is a binary asset.** Phase 4 adds a *system* for real
-GLB/GLTF assets (registry, loader, folder tree, license tracking) plus one
-fully procedural walkable interior. Specifically:
-
-- `src/data/modelRegistry.ts` — 8 building entries (Downtown Landmark,
-  Modern Villa, Hospital, University, Shopping Mall, Airport Terminal,
-  Office Tower, Apartment Building) + 5 vehicle entries (car, bus,
-  ambulance, fire truck, police car). Every entry has `available: false`
-  and `license`/`source` set to a placeholder — there is nothing to
-  document licenses *for* yet, because nothing is bundled.
-- **Villa interior** — procedural: walls, floors, furniture (sofa, tables,
-  chairs, bed, wardrobe, kitchen counter/island, bathroom fixtures, lamps)
-  are all `BoxGeometry`/`CylinderGeometry` compositions with tuned
-  `MeshStandardMaterial` roughness/metalness (wood, fabric, stone, ceramic,
-  metal, glass via `MeshPhysicalMaterial` transmission) — no textures, no
-  external files.
-- **Pedestrians** — 16 instanced low-poly figures (box body + sphere head)
-  walking fixed paths near the University, Shopping, and Downtown zones.
-  Capped low deliberately, per the brief.
-- **Vehicle wheels** — 4 instanced cylinders per car/bus/truck, added to
-  the existing chassis+cabin system from Phase 3.
-
-### License / source of every external model
-
-There are none — the registry ships with every entry pointing at a
-non-existent file (`available: false`). See "Adding your own 3D models"
-below for the exact activation steps, and `public/models/README.md` for
-the license-recording convention once you do add one.
-
-### How to add another GLB model
-
-1. Drop the `.glb` into the matching `public/models/<category>/` folder.
-2. In `src/data/modelRegistry.ts`, find (or add) its entry: set `path`,
-   `available: true`, and fill in `license` + `source`.
-3. Wherever that building/vehicle is constructed (e.g. the archetype loop
-   or the vehicle setup in `CityVerse.tsx`), call:
-   ```ts
-   import { loadRegisteredModel } from "./3d/assets/assetLoader";
-   const model = await loadRegisteredModel("modern-villa");
-   if (model) { /* position/scale it, scene.add(model) */ }
-   else { /* fall back to the existing procedural archetype — already there */ }
-   ```
-   `loadRegisteredModel` returns `null` for anything not marked
-   `available`, so existing procedural rendering is always the safe
-   fallback — nothing breaks if a model is missing.
-4. Respect the entry's `lod` tiers if you want distance-based swapping
-   (e.g. `THREE.LOD` between the GLB and the procedural version) — the
-   data's there; wiring a given building's LOD swap is a small, isolated
-   change per building, not a system-wide one.
-
-### How to create another walkable interior
-
-`VillaInterior.tsx` is written to be a template, not a one-off:
-
-1. Copy `src/3d/interiors/VillaInterior.tsx` → e.g. `HospitalInterior.tsx`.
-2. Redefine `WALL_SEGMENTS`, `ROOMS`, and `DOORS_DEF` for the new floor
-   plan (same coordinate convention: centerline segments in local X/Z,
-   converted to collision AABBs by `wallAABB()`).
-3. Swap the furniture-builder calls in the middle of the effect for
-   room-appropriate ones (reuse `buildTable`/`buildChair`/`box`/`cyl`, or
-   add new small builders following the same pattern).
-4. The movement, collision, look-controls, door-interaction, minimap, and
-   day/night lighting rig are all generic — they don't need to change.
-5. In `CityVerse.tsx`, add a branch next to the villa's
-   `selectedBuilding.interiorKind === "house"` check (search for
-   `enterVilla`) that mounts your new component instead, gated on the
-   matching `interiorKind`.
-
-Hospital, University, and the Landmark currently still use the old 2D
-floor-plan preview (`INTERIOR_PRESETS`) — intentionally, per "start with
-ONE building first." They're the next three candidates for this same
-pattern once the villa's been checked out in a real browser.
-
-### Performance results (from this build)
-
-- `npm run build`: **succeeds**, `tsc --noEmit` clean, `vite build` clean
-  (see "Build result" below for exact output).
-- Draw calls: the exterior city scene is still ~300 (per the Phase 3
-  count) — Phase 4 added pedestrians (2 instanced meshes) and wheels (1
-  instanced mesh), i.e. **+3 draw calls total**, regardless of car/pedestrian
-  count, because both are instanced.
-- The villa interior is a **separate, isolated scene** — while it's open,
-  the main city's `requestAnimationFrame` loop hits an early-return guard
-  (`stateRef.current.paused`) and skips its `renderer.render()` call
-  entirely, so you're not paying for two full scenes at once. The interior
-  itself is ~40 simple meshes (no instancing needed at that scale) plus 5
-  point lights — cheap on any desktop GPU and reasonable on mid-range
-  mobile.
-- Nothing loads eagerly beyond what was already loading in Phase 3 — the
-  villa interior's geometry is only constructed when `Enter Building` is
-  clicked (component mounts on demand, unmounts and disposes its renderer
-  on exit).
-
-### Build result
-
-```
-$ npm run build
-> tsc --noEmit && vite build
-✓ 2302 modules transformed
-dist/index.html                     1.03 kB
-dist/assets/index-*.css            20.31 kB
-dist/assets/index-*.js           1,124.43 kB   (309.49 kB gzipped)
-✓ built in ~14s
-```
-Zero TypeScript errors, zero build errors. (The "chunk larger than 500kB"
-notice is Vite's default code-splitting advisory, not an error — see
-`vite.config.ts` if you want to split the bundle further.)
-
-### What I could not verify (no browser in this environment)
-
-I don't have a way to launch a real browser here, so the WASD movement,
-touch joystick, collision sliding, door animation timing, and mouse/touch
-look controls are verified by careful code review and static
-type/build-checking only — not by actually walking around. Please try the
-villa in a real browser before treating the interior as final; if
-collision feels off in a specific spot, the fix is almost always a small
-adjustment to the relevant entry in `WALL_SEGMENTS`.
-
-## Notes on this build
-
-- Camera controls are a small hand-rolled orbit implementation (drag to
-  rotate, wheel/pinch to zoom) rather than Three.js's `OrbitControls`, to
-  keep the dependency surface minimal — swap it in if you'd prefer.
-- TypeScript is configured permissively (`strict: false`) since this is a
-  fast-moving prototype ported from a single-file artifact; tighten
-  `tsconfig.json` incrementally as the codebase stabilizes.
-- All city, traffic, energy, and emergency figures are simulated demo data,
-  clearly labeled as such in the UI — see `docs/iot-integration.md` for how
-  real sensor feeds plug in without changing the frontend.
-
-## License
-
-Prototype/demo code — add a license file appropriate to your use case before
-distributing.
