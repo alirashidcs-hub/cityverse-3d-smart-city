@@ -110,29 +110,40 @@ Real / Simulated City Data
  AI Analysis
           ↓
  Decisions & Insights
+
 🏙️ City Districts
 CityVerse contains eight procedurally generated districts.
 District
 Purpose
+
 🏙️ Downtown
 Skyscrapers, offices and city landmark
+
 🏡 Residential
 Houses, apartments and parks
+
 🛍️ Commercial
 Shops, restaurants and businesses
+
 🏭 Industrial
 Factories, warehouses and logistics
+
 🎓 University
 Campus buildings and student areas
+
 ✈️ Airport
 Airport terminal and transportation
+
 🏥 Hospital
 Healthcare infrastructure and emergency services
+
 🛒 Shopping
 Shopping centers, retail and pedestrian areas
 Each district has different building types, roads, traffic characteristics and infrastructure behavior.
+
 🌆 3D City Experience
 The city is generated using Three.js.
+
 The environment includes:
 Buildings
 Roads
@@ -149,7 +160,9 @@ Fountains
 Landmark tower
 Pedestrians
 Emergency vehicles
+
 The city is designed to provide an architectural visualization experience rather than a traditional 2D dashboard.
+
 🏢 Building System
 CityVerse uses procedural architectural building archetypes.
 Current building types include:
@@ -172,16 +185,22 @@ Signs
 Windows
 Glass sections
 Buildings are varied using seeded generation so the city does not contain identical structures everywhere.
+
 🪟 Dynamic Windows
 Buildings contain large numbers of instanced window elements.
+
 During the day:
 Windows appear as reflective glass.
+
 During the night:
 Selected windows illuminate.
+
 Warm and cool lighting variations appear.
 Building lighting changes automatically with the time-of-day system.
+
 🛣️ Smart Road Network
 CityVerse includes a multi-level road system.
+
 Road types include:
 Main roads
 Secondary roads
@@ -195,6 +214,7 @@ Curbs
 Street lights
 Traffic lights
 Traffic simulation
+
 🚗 Traffic Simulation
 Traffic changes dynamically based on city conditions.
 Traffic levels:
@@ -203,12 +223,14 @@ Traffic levels:
 🟠 Heavy
 🔴 Severe
 Vehicles respond to simulated congestion.
+
 Vehicle types include:
 Cars
 Buses
 Trucks
 Emergency vehicles
 Road closure simulations can reroute traffic onto alternative roads.
+
 🚦 Traffic Lights
 Traffic lights are connected to simulated traffic conditions.
 The system can visually reflect changes in:
@@ -216,25 +238,32 @@ Traffic volume
 Congestion
 Road conditions
 Simulation scenarios
+
 🌦️ Dynamic Weather
 CityVerse supports multiple weather modes.
+
 ☀️ Clear
 Normal visibility and lighting.
+
 ☁️ Cloudy
 Reduced environmental brightness.
+
 🌧️ Rain
 Includes:
 Particle rain
 Wet-road appearance
 Puddle effects
+
 ⛈️ Storm
 Includes:
 Heavy rain
 Fog
 Lightning effects
 Darker lighting
+
 🌫️ Fog
 Dynamic atmospheric fog reduces visibility.
+
 🌅 Time-of-Day Simulation
 Users can change the city time.
 Supported periods range from:
@@ -252,6 +281,7 @@ Building windows
 Street lights
 Traffic lights
 Landmark illumination
+
 🎮 Simulation Mode
 Simulation Mode is one of the core CityVerse features.
 Users can change:
@@ -272,6 +302,7 @@ Population
 Energy
 0% ━━━━━━━━━●━━ 100%
 Changes immediately affect the simulated city.
+
 🧪 What-If Simulation
 CityVerse allows users to experiment with hypothetical situations.
 Examples:
@@ -293,6 +324,7 @@ Affected roads
 Estimated delay
 Population impact
 City score change
+
 🚧 Construction Simulation
 Users can place construction zones directly inside the 3D city.
 Construction simulations can affect:
@@ -302,6 +334,7 @@ Roads
 Infrastructure
 District performance
 The application displays a simulated construction timeline.
+
 🚫 Road Closure Simulation
 Users can select a road and close it.
 CityVerse calculates:
@@ -311,6 +344,7 @@ Estimated delay
 Affected districts
 Alternative routes
 Vehicles visually reroute through alternative roads.
+
 🚨 Emergency Simulation
 CityVerse supports multiple emergency scenarios.
 Supported Events
@@ -325,6 +359,7 @@ Population affected
 Infrastructure affected
 Emergency response recommendations
 Emergency markers appear directly in the 3D city.
+
 🚑 Emergency Vehicles
 Emergency simulations can activate emergency vehicles.
 Supported vehicle types include:
@@ -332,6 +367,7 @@ Ambulance
 Fire truck
 Police vehicle
 Emergency vehicles can move toward the simulated emergency location.
+
 ⚡ Energy System
 CityVerse includes an energy visualization system.
 Users can inspect:
@@ -340,10 +376,12 @@ District energy consumption
 Energy efficiency
 Energy flow
 Buildings can display energy-related visual indicators.
+
 💧 Water System
 The city includes simulated water infrastructure.
 Water data can be visualized by district and incorporated into simulations.
 Future versions can connect this system to real water sensors.
+
 🌫️ Air Quality
 Air quality can vary between districts.
 The analytics system provides district-level visualization.
@@ -351,6 +389,7 @@ Future versions can connect the system to real:
 Air-quality sensors
 Weather stations
 Environmental monitoring devices
+
 🤖 AI City Assistant
 CityVerse includes an AI assistant powered by the Anthropic API.
 The assistant receives the current simulated city state as context.
@@ -367,8 +406,10 @@ What happens if this road is closed?
 
 Which district needs infrastructure improvements?
 The AI is designed to answer using the actual simulated values instead of relying purely on generic responses.
+
 🧠 AI Grounding Architecture
 The AI request flow is:
+
 User
  ↓
 CityVerse UI
@@ -382,8 +423,10 @@ Anthropic API
 AI Response
  ↓
 CityVerse UI
+
 The API key is kept server-side.
 It is never intended to be exposed to the browser.
+
 📊 Analytics
 CityVerse includes analytics for:
 Energy consumption
@@ -393,6 +436,7 @@ District performance
 City Intelligence Score
 Simulation results
 Charts help users understand how changes affect the city.
+
 🏆 City Intelligence Score
 CityVerse calculates a simulated City Intelligence Score.
 The score changes based on simulated conditions such as:
@@ -404,8 +448,10 @@ Transport
 Weather
 Infrastructure
 The score provides a simple high-level view of city performance.
+
 🔄 Before / After Comparison
 Simulation events can be compared against the baseline.
+
 Example:
 CITY SCORE
 
@@ -421,7 +467,9 @@ ENERGY
 
 Before: 62%
 After: 89%
+
 This allows users to understand the impact of hypothetical decisions.
+
 🏠 Walkable 3D Interior
 CityVerse includes a procedural walkable Modern Villa interior.
 The interior includes:
@@ -442,6 +490,7 @@ Mobile:
 Touch controls
 Virtual joystick
 The interior is loaded only when needed to reduce performance impact.
+
 🌳 Environment
 The city environment contains:
 Trees
@@ -453,6 +502,7 @@ Parking areas
 Water features
 Street furniture
 Vegetation is generated using optimized geometry and instancing.
+
 🗼 Downtown Landmark
 Downtown includes a custom futuristic landmark tower.
 The landmark contains:
@@ -463,6 +513,7 @@ Plaza
 Fountain
 Surrounding landscaping
 It acts as the visual centerpiece of the city.
+
 🎥 Camera & Exploration
 Users can:
 Orbit around the city
@@ -473,6 +524,7 @@ Fly toward selected buildings
 Explore at street level
 Enter selected buildings
 The goal is to make the city feel like an explorable digital environment rather than a static visualization.
+
 🗺️ City Layers
 Users can independently toggle:
 Buildings
@@ -483,6 +535,7 @@ Water
 Energy flow
 Other visualization layers
 This allows users to focus on specific infrastructure systems.
+
 ⚡ Performance
 Performance is a major consideration.
 CityVerse uses:
@@ -505,6 +558,7 @@ Vehicles
 Lamps
 Pedestrians
 use instancing where appropriate.
+
 📦 3D Asset Architecture
 CityVerse includes a GLB/GLTF asset pipeline.
 Current asset registry categories include:
@@ -515,6 +569,7 @@ Interiors
 Environment
 External binary assets are not bundled by default.
 This avoids accidentally distributing third-party models without verifying their licenses.
+
 🧩 Adding Your Own 3D Models
 Place models inside:
 public/models/
@@ -540,6 +595,7 @@ Source
 Scale
 LOD information
 The application retains procedural fallbacks if a model is unavailable.
+
 🧱 Technology Stack
 Frontend
 React
@@ -572,7 +628,9 @@ Persistent simulation storage
 Deployment
 Vercel
 GitHub
+
 📁 Project Structure
+
 CityVerse/
 │
 ├── api/
@@ -629,6 +687,7 @@ Check:
 node -v
 npm -v
 git --version
+
 📥 Install Dependencies
 Clone the repository:
 git clone https://github.com/alirashidcs-hub/cityverse-3d-smart-city.git
@@ -636,6 +695,7 @@ Enter the project:
 cd cityverse-3d-smart-city
 Install dependencies:
 npm install
+
 🔐 Environment Variables
 Create:
 .env
@@ -647,6 +707,7 @@ The API key must remain private.
 Never commit:
 .env
 The repository's .gitignore already excludes environment secrets.
+
 💻 Run Locally
 For frontend-only development:
 npm run dev
@@ -654,12 +715,14 @@ Then open:
 http://localhost:5173
 The 3D city and simulation systems will work normally.
 The AI assistant requires the serverless API function.
+
 🔌 Run Frontend + API Locally
 Install Vercel CLI:
 npm install -g vercel
 Then:
 vercel dev
 This allows the Vercel serverless function to run locally together with the frontend.
+
 🧪 Type Check
 Run:
 npm run typecheck
@@ -667,11 +730,13 @@ npm run typecheck
 Run:
 npm run build
 This performs:
+
 TypeScript check
        ↓
 Vite production build
        ↓
 dist/
+
 👀 Preview Production Build
 npm run preview
 ☁️ Deploy to Vercel
@@ -683,6 +748,7 @@ vercel
 Production deployment:
 vercel --prod
 Alternatively, import the GitHub repository directly into Vercel.
+
 🔑 Vercel Environment Variables
 Inside:
 Vercel
@@ -701,10 +767,12 @@ git commit -m "feat: improve CityVerse 3D experience"
 Push:
 git push
 If Vercel is connected to the GitHub repository, the new version will automatically deploy.
+
 🗄️ Future Supabase Architecture
 The current version does not require a database.
 City data is generated client-side using seeded procedural generation.
 The planned production architecture is:
+
 User
  ↓
 Next.js / React
@@ -718,6 +786,7 @@ PostgreSQL
 Realtime / IoT
  ↓
 City Digital Twin
+
 The future system can support:
 User accounts
 Saved cities
@@ -733,6 +802,7 @@ See:
 docs/database-schema.md
 docs/architecture.md
 docs/deployment.md
+
 📡 Future IoT Integration
 The architecture is designed to eventually support real smart-city sensors.
 Potential sensors:
@@ -742,7 +812,9 @@ Water meters
 Air-quality sensors
 Weather stations
 Emergency sensors
+
 Future data flow:
+
 IoT Sensors
      ↓
 IoT Gateway
@@ -756,6 +828,7 @@ Realtime Events
 CityVerse
      ↓
 3D Visualization
+
 🔮 Roadmap
 Phase 1 — Core 3D City
 [x] Procedural city
@@ -818,6 +891,7 @@ Phase 6 — Advanced Digital Twin
 [ ] Predictive analytics
 [ ] Machine-learning forecasting
 [ ] Digital twin synchronization
+
 🧠 Future AI Capabilities
 Future versions can expand the AI assistant into a complete city intelligence engine.
 Potential capabilities:
@@ -846,6 +920,7 @@ Where should a new school be located?
 How can we reduce Downtown congestion?
 
 Which district has the highest energy risk?
+
 🔒 Security
 The current prototype keeps the Anthropic API key server-side.
 Production architecture will additionally implement:
@@ -860,6 +935,7 @@ Role-based access control
 Server-side AI requests
 Security documentation:
 docs/security.md
+
 📈 Performance Considerations
 CityVerse uses several optimization techniques.
 Instancing
@@ -873,7 +949,9 @@ Materials are shared whenever possible.
 Scene Isolation
 The main city renderer pauses while the villa interior is active.
 LOD Strategy
+
 Future GLB assets can use:
+
 High Detail
     ↓
 Medium Detail
@@ -881,6 +959,7 @@ Medium Detail
 Low Detail
     ↓
 Procedural Fallback
+
 ⚠️ Current Prototype Limitations
 CityVerse is currently a prototype.
 The following are simulated rather than connected to real-world infrastructure:
@@ -898,6 +977,7 @@ No real IoT sensor integration
 No persistent city state
 No multi-user collaboration
 The architecture for these capabilities is documented in docs/.
+
 📚 Documentation
 Detailed architecture documentation is available in:
 docs/
@@ -908,6 +988,7 @@ docs/
 ├── iot-integration.md
 ├── deployment.md
 └── security.md
+
 🧪 Build Verification
 The project has been verified using:
 npm install
@@ -948,18 +1029,24 @@ Future Realtime
 Supabase Realtime
 Future IoT
 MQTT / IoT Gateway
+
 🌐 Live Application
 CityVerse 3D Smart City
+
 🚀 Open the application:
 https://cityverse-3d-smart-city.vercel.app/⁠�
+
 👨‍💻 Developer
 Ali Rashid
 Computer Science Student
 University of Engineering and Technology (UET) Taxila
+
 📧 Email:
 ar2701699@gmail.com
+
 💼 LinkedIn:
 https://www.linkedin.com/in/ali-rashid-cs/⁠�
+
 ⭐ Support the Project
 If you find CityVerse interesting:
 ⭐ Star the repository
@@ -967,9 +1054,11 @@ If you find CityVerse interesting:
 🐛 Report issues
 💡 Suggest improvements
 🔧 Contribute new features
+
 📜 License
 This project is currently a prototype/demo project.
 Before distributing or commercializing the project, add an appropriate open-source or proprietary license.
+
 🚀 Final Vision
 CityVerse is designed to evolve from a procedural 3D prototype into a complete AI-powered Smart City Digital Twin platform.
 The long-term goal is:
